@@ -1,0 +1,191 @@
+@import '@fontsource/fira-mono';
+
+/*  */
+/* setup */
+:root {
+	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+
+	/* font-sizes */
+	--text-sm: 1.15rem;
+	--text-md: 1.35rem;
+	--text-lg: 1.6rem;
+
+	/* container width */
+	--site-max-width: 1280px;
+
+	/* gutters */
+	--gutter-na: 0.5rem;
+	--gutter-mi: 1rem;
+	--gutter-xs: 1.5rem;
+	--gutter-sm: 2rem;
+	--gutter-md: 2.5rem;
+	--gutter-lg: 3rem;
+	--gutter-xl: 6rem;
+	--gutter-2xl: 12rem;
+
+	--scroll-padding: 4.375rem;
+	--radius: 85px;
+
+	/* colors */
+	--bg-color-primary: #fbfbfb;
+	--bg-color-secondary: #ffffff;
+	--important: #000;
+	--sub: #111;
+	--body: #585b63;
+	--border: #62626234;
+	--border-dark: #5e5e5e1f;
+	--gradient-border: linear-gradient(to left bottom, #000000c6, #0e0d0d00);
+	--shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-family: var(--font-body);
+	box-sizing: border-box;
+	scroll-padding-top: var(--scroll-padding);
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+	html {
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 645px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+body {
+	font-size: var(--text-md);
+	color: var(--body);
+	background-color: var(--bg-color-primary);
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+}
+
+/*  */
+/* typography */
+
+p,
+h1,
+h2,
+h3,
+h4 {
+	overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-stretch: 125%;
+	line-height: 1.2;
+	color: var(--important);
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: var(--body);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+picture,
+svg,
+img {
+	display: block;
+	max-inline-size: 100%;
+	object-fit: contain;
+}
+
+ul {
+	list-style: none;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+/*  */
+/* layout */
+.container {
+	max-inline-size: var(--max-width);
+	margin-inline: auto;
+}
+
+@media (max-width: 1375px) {
+	:root {
+		--max-width: 1160px;
+	}
+}
+
+@media (max-width: 1275px) {
+	.container {
+		padding-inline: var(--gutter-sm);
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		padding-inline: var(--gutter-md);
+	}
+}
+
+@media (max-width: 575px) {
+	.container {
+		padding-inline: var(--gutter-sm);
+	}
+}

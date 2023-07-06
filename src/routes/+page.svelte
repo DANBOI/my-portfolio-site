@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Home</title>
+	<title>Chen's Portfolio</title>
 	<meta name="description" content="chen's portfolio" />
 </svelte:head>
 
