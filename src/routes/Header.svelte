@@ -1,7 +1,3 @@
-<script>
-	// import hero from '$lib/images/hero-bg.webp';
-</script>
-
 <header class="header">
 	<div class="container">
 		<div class="header-textbox">

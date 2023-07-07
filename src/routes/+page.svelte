@@ -1,5 +1,6 @@
 <script>
-	import Toolkit from './sections/Toolkit.svelte';
+	import ToolkitSection from './sections/Toolkit.svelte';
+	import WorksSection from './sections/Works.svelte';
 </script>
 
 <svelte:head>
@@ -7,4 +8,5 @@
 	<meta name="description" content="chen's portfolio" />
 </svelte:head>
 
-<Toolkit />
+<ToolkitSection />
+<WorksSection />
