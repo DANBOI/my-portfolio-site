@@ -1,5 +1,5 @@
 <script>
-	import hero from '$lib/images/hero-bg.webp';
+	// import hero from '$lib/images/hero-bg.webp';
 </script>
 
 <header class="header">
@@ -31,7 +31,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: linear-gradient(#ffffffa2, #ffffffe6), url({hero});
+		background-image: linear-gradient(#ffffffa2, #ffffffe6), url('$lib/images/hero-bg.webp');
 	}
 
 	.header-textbox {

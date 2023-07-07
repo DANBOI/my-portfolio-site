@@ -4,33 +4,34 @@
 	import './styles.css';
 </script>
 
-<div class="app">
-	<Header />
+<Header />
 
-	<main>
-		<slot />
-	</main>
+<main>
+	<slot />
+</main>
 
-	<footer>
-		<div class="corner">
-			<a href="https://kit.svelte.dev">
-				<img src={logo} alt="SvelteKit" />
-			</a>
-		</div>
-		Chen@my portfolio powered by svelte
-	</footer>
-</div>
+<footer>
+	<div class="corner">
+		<a href="https://kit.svelte.dev">
+			<img src={logo} alt="SvelteKit" />
+		</a>
+	</div>
+	Chen@my portfolio powered by svelte
+</footer>
 
 <style>
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		border-top: 1px solid var(--border);
+		border-top-left-radius: var(--radius);
+		border-top-right-radius: var(--radius);
+		background-color: var(--bg-color-primary);
+		transform: translateY(calc(-1 * var(--radius)));
+	}
+
+	@media (max-width: 1185px) {
+		:root {
+			--radius: 45px;
+		}
 	}
 
 	footer {
