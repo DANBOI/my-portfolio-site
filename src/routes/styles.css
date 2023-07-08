@@ -38,18 +38,34 @@
 	--border-dark: #5e5e5e1f;
 	--gradient-border: linear-gradient(to left bottom, #000000c6, #0e0d0d00);
 	--shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+	--easing: cubic-bezier(0.86, 0, 0.07, 1);
 
-	/* gray: {
-     100: "#edf1f6",
-     200: "#dbe4ed",
-     300: "#cad6e4",
-     400: "#b8c9db",
-     500: "#a6bbd2",
-     600: "#8596a8",
-     700: "#64707e",
-     800: "#424b54",
-     900: "#21252a"
+	--color-100: #edf1f6;
+	--color-200: #dbe4ed;
+	--color-300: #cad6e4;
+	--color-400: #b8c9db;
+	--color-500: #a6bbd2;
+	--color-600: #8596a8;
+	--color-700: #64707e;
+	--color-800: #424b54;
+	--color-900: #21252a;
+
+	/* blue: {
+     100: "#daecfc",
+     200: "#b5d9f9",
+     300: "#8fc6f5",
+     400: "#6ab3f2",
+     500: "#45a0ef",
+     600: "#3780bf",
+     700: "#29608f",
+     800: "#1c4060",
+     900: "#0e2030"
 }, */
+
+	--gradient-nav: radial-gradient(at 48% 98%, var(--color-200) 0px, transparent 50%),
+		radial-gradient(at 84% 67%, var(--color-300) 0px, transparent 50%),
+		radial-gradient(at 16% 47%, var(--color-400) 0px, transparent 50%),
+		radial-gradient(at 73% 11%, var(--color-500) 0px, transparent 50%);
 }
 
 *,
@@ -170,6 +186,11 @@ textarea {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+.hidden {
+	visibility: hidden;
+	transform: translateX(-100%);
 }
 
 /*  */

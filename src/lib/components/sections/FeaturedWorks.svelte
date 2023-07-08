@@ -4,11 +4,11 @@
 	import { fly } from 'svelte/transition';
 </script>
 
-<section>
+<section id="featuredWorks">
 	<div class="container">
 		<h2>Featured Works</h2>
 		<div class="work-boxes">
-			{#each new Array(3) as work (work.id)}
+			{#each new Array(3) as work}
 				<div class="work-box">
 					<div class="work-textbox">
 						<h3>project title</h3>

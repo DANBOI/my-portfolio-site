@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<section class="other-works">
+<section id="otherWorks">
 	<div class="container">
 		<h2>Other Works</h2>
 		<div class="other-works-boxes">

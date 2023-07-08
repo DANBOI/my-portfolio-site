@@ -2,7 +2,7 @@
 	import imgSrc from '$lib/images/react.webp';
 </script>
 
-<section>
+<section id="toolkit">
 	<div class="container">
 		<h2>My Toolkit</h2>
 		<div class="skills-imgs">

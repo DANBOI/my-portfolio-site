@@ -3,7 +3,7 @@
 	import Button from '../Button.svelte';
 </script>
 
-<section>
+<section id="contact">
 	<div class="container">
 		<h2>Send Message</h2>
 		<div class="contact-content">

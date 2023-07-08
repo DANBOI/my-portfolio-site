@@ -1,8 +1,10 @@
 <script>
 	import Button from './Button.svelte';
+	import Navigation from './Navigation.svelte';
 </script>
 
 <header class="header">
+	<Navigation />
 	<div class="container">
 		<div class="header-textbox">
 			<h1>
