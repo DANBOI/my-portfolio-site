@@ -1,6 +1,6 @@
 <script>
 	import logo from '$lib/images/svelte-logo.svg';
-	import Header from './Header.svelte';
+	import Header from '../lib/components/Header.svelte';
 	import './styles.css';
 </script>
 

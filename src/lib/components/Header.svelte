@@ -1,3 +1,7 @@
+<script>
+	import Button from './Button.svelte';
+</script>
+
 <header class="header">
 	<div class="container">
 		<div class="header-textbox">
@@ -12,8 +16,8 @@
 			</p>
 
 			<div class="header-btns">
-				<a href="#contact" class="btn btn-cta">Contact me</a>
-				<a href="#works" class="btn btn-secondary">See my works</a>
+				<Button href="#contact" label="Contact me" />
+				<Button href="#works" label="See my works" variant="secondary" />
 			</div>
 		</div>
 	</div>
@@ -71,49 +75,5 @@
 			flex-direction: column;
 			width: 80%;
 		}
-	}
-
-	.btn {
-		font-size: 1.35rem;
-		font-weight: 700;
-		text-decoration: none;
-		text-align: center;
-		padding: 18px 60px;
-		border-radius: var(--gutter-na);
-		transition: 0.3s all ease-in-out;
-		cursor: pointer;
-	}
-
-	@media (max-width: 700px) {
-		.btn {
-			padding: 16px 48px;
-		}
-	}
-
-	@media (max-width: 485px) {
-		.btn {
-			font-size: 1.2rem;
-			padding: 14px 38px;
-		}
-	}
-
-	.btn-cta {
-		color: var(--bg-color-primary);
-		background-color: var(--important);
-	}
-
-	.btn-cta:hover,
-	.btn-cta:focus {
-		box-shadow: #07070733 0 0 0 var(--gutter-na);
-	}
-
-	.btn-secondary {
-		border: 1px solid var(--border-dark);
-		color: var(--important);
-	}
-
-	.btn-secondary:hover,
-	.btn-secondary:focus {
-		border-color: var(--important);
 	}
 </style>

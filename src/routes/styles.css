@@ -38,6 +38,18 @@
 	--border-dark: #5e5e5e1f;
 	--gradient-border: linear-gradient(to left bottom, #000000c6, #0e0d0d00);
 	--shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+
+	/* gray: {
+     100: "#edf1f6",
+     200: "#dbe4ed",
+     300: "#cad6e4",
+     400: "#b8c9db",
+     500: "#a6bbd2",
+     600: "#8596a8",
+     700: "#64707e",
+     800: "#424b54",
+     900: "#21252a"
+}, */
 }
 
 *,
