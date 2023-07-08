@@ -1,6 +1,7 @@
 <script>
-	import ToolkitSection from './sections/Toolkit.svelte';
-	import WorksSection from './sections/Works.svelte';
+	import ToolkitSection from '$lib/components/sections/Toolkit.svelte';
+	import FeaturedWorksSection from '$lib/components/sections/FeaturedWorks.svelte';
+	import OtherWorksSection from '$lib/components/sections/OtherWorks.svelte';
 </script>
 
 <svelte:head>
@@ -9,4 +10,5 @@
 </svelte:head>
 
 <ToolkitSection />
-<WorksSection />
+<FeaturedWorksSection />
+<OtherWorksSection />
