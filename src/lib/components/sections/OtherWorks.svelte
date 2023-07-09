@@ -1,27 +1,25 @@
 <script lang="ts">
-	import workSrc from '$lib/images/work-mountains.webp';
-	import WorkLinks from '../../components/WorkLinks.svelte';
-	import { fade } from 'svelte/transition';
+	import WorkLinks from '$lib/components/WorkLinks.svelte';
+	export let otherProjects: any;
 </script>
 
 <section id="otherWorks">
 	<div class="container">
 		<h2>Other Works</h2>
 		<div class="other-works-boxes">
-			{#each new Array(4) as work, index}
+			{#each otherProjects as { title, description, demoUrl, srcUrl, imgUrl }, index}
 				<article class="other-works-box" class:featured-other-works={index === 0}>
 					<picture class="other-works-illustration" class:visually-hidden={index !== 0}>
-						<img src={workSrc} alt="some pic" loading="lazy" />
+						<img src={imgUrl} alt={title} loading="lazy" />
 					</picture>
 					<div class="other-works-textbox">
 						<div>
-							<svelte:element this={index === 0 ? 'h3' : 'h4'}> Project title </svelte:element>
+							<svelte:element this={index === 0 ? 'h3' : 'h4'}> {title} </svelte:element>
 							<p class="other-works-text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis dignissimos vel
-								natus recusandae explicabo consequuntur!
+								{description}
 							</p>
 						</div>
-						<WorkLinks />
+						<WorkLinks {demoUrl} {srcUrl} />
 					</div>
 				</article>
 			{/each}

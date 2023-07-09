@@ -3,6 +3,10 @@
 	import FeaturedWorksSection from '$lib/components/sections/FeaturedWorks.svelte';
 	import OtherWorksSection from '$lib/components/sections/OtherWorks.svelte';
 	import ContactSection from '$lib/components/sections/Contact.svelte';
+
+	export let data;
+	$: featuredProjects = data.projects.filter((prj) => prj.featured).slice(0, 3);
+	$: otherProjects = data.projects.filter((prj) => !prj.featured).slice(0, 4);
 </script>
 
 <svelte:head>
@@ -11,6 +15,6 @@
 </svelte:head>
 
 <ToolkitSection />
-<FeaturedWorksSection />
-<OtherWorksSection />
+<FeaturedWorksSection {featuredProjects} />
+<OtherWorksSection {otherProjects} />
 <ContactSection />

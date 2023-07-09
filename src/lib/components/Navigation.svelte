@@ -1,6 +1,28 @@
 <script lang="ts">
 	let hidden = true;
 	let btnLabel = 'menu';
+	let navItems = [
+		{
+			label: 'Home',
+			href: '/'
+		},
+		{
+			label: 'My Toolkit',
+			href: '#toolkit'
+		},
+		{
+			label: 'Featured Works',
+			href: '#featuredWorks'
+		},
+		{
+			label: 'Other Works',
+			href: '#otherWorks'
+		},
+		{
+			label: 'Contact',
+			href: '#contact'
+		}
+	];
 
 	const toggleNav = () => {
 		hidden = !hidden;
@@ -22,14 +44,10 @@
 </div>
 
 <nav class="nav" class:hidden>
-	<ol class="nav-items" on:click={(e) => e.target?.localName === 'a' && toggleNav()}>
-		<li class="nav-item"><a href="/">Home</a></li>
-		<li class="nav-item"><a href="#toolkit">My Toolkit</a></li>
-		<li class="nav-item"><a href="#featuredWorks">Featured Works</a></li>
-		<li class="nav-item"><a href="#otherWorks">Other Works</a></li>
-		<li class="nav-item">
-			<a href="#contact" data-focused="last-focused">Contact</a>
-		</li>
+	<ol class="nav-items">
+		{#each navItems as navItem (navItem.label)}
+			<li class="nav-item"><a href={navItem.href} on:click={toggleNav}>{navItem.label}</a></li>
+		{/each}
 	</ol>
 </nav>
 
@@ -46,7 +64,6 @@
 		display: block;
 		margin-inline-start: auto;
 		border: 1px solid var(--border-dark);
-		/* Using width to prevent from jerk when text content changes */
 		width: 132px;
 		padding-block: var(--gutter-na);
 		border-radius: var(--gutter-lg);

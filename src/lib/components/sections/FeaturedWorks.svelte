@@ -1,30 +1,28 @@
 <script lang="ts">
-	import workSrc from '$lib/images/work-mountains.webp';
-	import WorkLinks from '../../components/WorkLinks.svelte';
-	import { fly } from 'svelte/transition';
+	import WorkLinks from '$lib/components/WorkLinks.svelte';
+	export let featuredProjects: any;
 </script>
 
 <section id="featuredWorks">
 	<div class="container">
 		<h2>Featured Works</h2>
 		<div class="work-boxes">
-			{#each new Array(3) as work}
+			{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl } (title)}
 				<div class="work-box">
 					<div class="work-textbox">
-						<h3>project title</h3>
+						<h3>{title}</h3>
 						<p class="work-text">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, recusandae!
+							{description}
 						</p>
 						<ol class="work-technologies">
-							<li>Nextjs</li>
-							<li>React</li>
-							<li>tailwind css</li>
-							<li>Mongoose</li>
+							{#each stack as tech}
+								<li>{tech}</li>
+							{/each}
 						</ol>
-						<WorkLinks />
+						<WorkLinks {demoUrl} {srcUrl} />
 					</div>
 					<picture class="work-img">
-						<img loading="lazy" src={workSrc} alt="a mountain work" />
+						<img loading="lazy" src={imgUrl} alt={title} />
 					</picture>
 				</div>
 			{/each}

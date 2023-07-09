@@ -19,7 +19,7 @@
 
 			<div class="header-btns">
 				<Button href="#contact" label="Contact me" />
-				<Button href="#works" label="See my works" variant="secondary" />
+				<Button href="#featuredWorks" label="See my works" variant="secondary" />
 			</div>
 		</div>
 	</div>

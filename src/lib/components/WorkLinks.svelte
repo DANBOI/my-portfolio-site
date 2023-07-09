@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
 	import github from '$lib/images/github.svg';
+	export let demoUrl: string;
+	export let srcUrl: string;
 </script>
 
 <div class="work-links">
-	<a href="demo-url" target="_blank" rel="noopener" class="link">View project</a>
+	<a href={demoUrl} target="_blank" rel="noopener" class="link">View project</a>
 
-	<a href="github repository" target="_blank" rel="noopener" title="Source code">
+	<a href={srcUrl} target="_blank" rel="noopener" title="Source code">
 		<img src={github} alt="GitHub" loading="lazy" />
 	</a>
 </div>
