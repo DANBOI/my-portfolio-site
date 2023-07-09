@@ -1,13 +1,30 @@
 <script>
-	import imgSrc from '$lib/images/react.webp';
+	let techIcons = [
+		'nextjs',
+		'react',
+		'nuxtjs',
+		'vue',
+		'tailwindcss',
+		'typescript',
+		'expressjs',
+		'django',
+		'mongodb',
+		'git'
+	];
 </script>
 
 <section id="toolkit">
 	<div class="container">
 		<h2>My Toolkit</h2>
 		<div class="skills-imgs">
-			{#each new Array(10) as skill, index}
-				<img src={imgSrc} alt="React" class="skills-img" loading="lazy" title="React" />
+			{#each techIcons.slice(0, 10) as tech}
+				<img
+					src="/src/lib/images/techs/{tech}.svg"
+					alt={tech}
+					class="skills-img"
+					loading="lazy"
+					title={tech}
+				/>
 			{/each}
 		</div>
 	</div>

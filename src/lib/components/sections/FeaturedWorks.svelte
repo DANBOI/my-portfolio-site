@@ -22,7 +22,7 @@
 						<WorkLinks {demoUrl} {srcUrl} />
 					</div>
 					<picture class="work-img">
-						<img loading="lazy" src={imgUrl} alt={title} />
+						<img loading="lazy" src="/src/lib/images/prjs/{imgUrl}" alt={title} />
 					</picture>
 				</div>
 			{/each}

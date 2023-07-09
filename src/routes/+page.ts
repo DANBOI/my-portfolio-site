@@ -10,7 +10,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test1.com',
 			srcUrl: 'https://test1.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: true
 		},
 		{
@@ -19,7 +19,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test2.com',
 			srcUrl: 'https://test2.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -28,7 +28,7 @@ export const load = (() => ({
 			stack: ['Nuxtjs', 'Tailwindcss', 'Typescript', 'Vue'],
 			demoUrl: 'https://test3.com',
 			srcUrl: 'https://test3.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: true
 		},
 		{
@@ -37,7 +37,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test4.com',
 			srcUrl: 'https://test4.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -46,7 +46,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test5.com',
 			srcUrl: 'https://test5.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -55,7 +55,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test6.com',
 			srcUrl: 'https://test6.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -64,7 +64,7 @@ export const load = (() => ({
 			stack: ['sveltekit', 'Tailwindcss', 'Typescript', 'svelte'],
 			demoUrl: 'https://test7.com',
 			srcUrl: 'https://test7.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: true
 		},
 		{
@@ -73,7 +73,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test8.com',
 			srcUrl: 'https://test8.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -82,7 +82,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test9.com',
 			srcUrl: 'https://test9.com',
-			imgUrl: '/src/lib/images/work-mountains.webp',
+			imgUrl: 'work-mountains.webp',
 			featured: false
 		},
 		{
@@ -91,7 +91,7 @@ export const load = (() => ({
 			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
 			demoUrl: 'https://test10.com',
 			srcUrl: 'https://test10.com',
-			imgUrl: '$lib/images/work-mountains.webpm',
+			imgUrl: 'work-mountains.webpm',
 			featured: false
 		}
 	]
