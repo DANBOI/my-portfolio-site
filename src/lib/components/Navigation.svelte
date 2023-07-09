@@ -1,25 +1,25 @@
 <script lang="ts">
 	let hidden = true;
-	let btnLabel = 'menu';
+	let btnLabel = 'メニュー';
 	let navItems = [
 		{
-			label: 'Home',
+			label: 'トップへ',
 			href: '/'
 		},
 		{
-			label: 'My Toolkit',
+			label: 'テクニカルスキル',
 			href: '#toolkit'
 		},
 		{
-			label: 'Featured Works',
+			label: 'プロジェクトピックアップ',
 			href: '#featuredWorks'
 		},
 		{
-			label: 'Other Works',
+			label: 'その他のプロジェクト',
 			href: '#otherWorks'
 		},
 		{
-			label: 'Contact',
+			label: '連絡フォーム',
 			href: '#contact'
 		}
 	];
@@ -30,8 +30,8 @@
 		document.body.classList.toggle('lock-screen');
 
 		// change text after transition
-		if (hidden) btnLabel = 'menu';
-		else setTimeout(() => (btnLabel = 'close'), 475);
+		if (hidden) btnLabel = 'メニュー';
+		else setTimeout(() => (btnLabel = '閉じる'), 475);
 	};
 </script>
 
@@ -76,7 +76,7 @@
 	.menu-btn,
 	.nav-items a {
 		font-stretch: 125%;
-		font-weight: 900;
+		font-weight: 700;
 	}
 
 	.nav {

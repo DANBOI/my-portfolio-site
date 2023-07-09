@@ -5,7 +5,7 @@
 
 <section id="featuredWorks">
 	<div class="container">
-		<h2>Featured Works</h2>
+		<h2>プロジェクトピックアップ</h2>
 		<div class="work-boxes">
 			{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl } (title)}
 				<div class="work-box">

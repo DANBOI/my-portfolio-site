@@ -5,34 +5,34 @@
 
 <section id="contact">
 	<div class="container">
-		<h2>Send Message</h2>
+		<h2>連絡フォーム</h2>
 		<div class="contact-content">
 			<div class="contact-textbox">
-				<strong class="about"> About me &DownArrow; </strong>
+				<strong class="about"> 私について &DownArrow; </strong>
 				<p class="contact-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae autem necessitatibus
-					expedita totam iure possimus quisquam.
+					フレームワークを駆使したモダンなフロントエンド開発とNode.jsを中心としたバックエンド開発、
+					データベース設計やAPI構築に関する各種業務を全般に手掛けています。
 				</p>
 				<p class="contact-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, repellat.
+					また英語や運動が大好きで、仕事以外は海外ドラマやドキュメンタリー、登山、ジョギング、サイクリングなどに当てはまれています。
 				</p>
 				<img src={avatar} alt="Chen" class="avatar" loading="lazy" />
 			</div>
 			<form action="#" class="contact-form">
 				<div class="form-field">
-					<label for="name">Your Name</label>
+					<label for="name">お名前</label>
 					<input type="text" name="name" id="name" required />
 				</div>
 				<div class="form-field">
-					<label for="email">Your Email</label>
+					<label for="email">メールアドレス</label>
 					<input type="email" name="email" id="email" required inputmode="email" />
 				</div>
 				<div class="form-field">
-					<label for="message"> Please let me know if I can help.</label>
+					<label for="message"> 何でもいいので、お気軽にご連絡ください。</label>
 					<textarea name="message" id="message" rows="5" required />
 				</div>
 				<div style:text-align="center">
-					<Button label="Send" variant="primary" />
+					<Button label="メール送信" variant="primary" />
 				</div>
 			</form>
 		</div>

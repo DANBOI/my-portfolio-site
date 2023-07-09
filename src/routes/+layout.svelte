@@ -12,11 +12,13 @@
 
 <footer>
 	<div class="corner">
+		<hr />
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
+		<hr />
 	</div>
-	Chen@my portfolio powered by svelte
+	Chen @ my portfolio powered by svelte
 </footer>
 
 <style>
@@ -53,21 +55,28 @@
 	}
 
 	.corner {
-		width: 3em;
+		display: flex;
+		align-self: stretch;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--gutter-xs);
 		height: 3em;
+	}
+
+	.corner hr {
+		flex-basis: 80%;
+		opacity: 0.3;
 	}
 
 	.corner a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
-		height: 100%;
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 3em;
+		height: 3em;
 		object-fit: contain;
 	}
 </style>

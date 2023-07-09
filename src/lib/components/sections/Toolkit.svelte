@@ -15,7 +15,7 @@
 
 <section id="toolkit">
 	<div class="container">
-		<h2>My Toolkit</h2>
+		<h2>テクニカルスキル</h2>
 		<div class="skills-imgs">
 			{#each techIcons.slice(0, 10) as tech}
 				<img

@@ -8,18 +8,17 @@
 	<div class="container">
 		<div class="header-textbox">
 			<h1>
-				Hello,I'm Chen<br />
-				a fullstack web developer
+				こんにちは、陳です<br />
+				ウェブ開発をメインにしています
 			</h1>
 
 			<p class="header-text">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita labore error sint harum
-				aut ipsa corrupti, laborum fugiat repellendus dolorem!
+				フロントエンドからバックエンドまで、UXに富んだレスポンシブルで高性能なウェブアプリの開発を行ってきました
 			</p>
 
 			<div class="header-btns">
-				<Button href="#contact" label="Contact me" />
-				<Button href="#featuredWorks" label="See my works" variant="secondary" />
+				<Button href="#contact" label="メッセージを送る" />
+				<Button href="#featuredWorks" label="プロジェクトを見る" variant="secondary" />
 			</div>
 		</div>
 	</div>

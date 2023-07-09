@@ -5,7 +5,7 @@
 
 <section id="otherWorks">
 	<div class="container">
-		<h2>Other Works</h2>
+		<h2>その他のプロジェクト</h2>
 		<div class="other-works-boxes">
 			{#each otherProjects as { title, description, demoUrl, srcUrl, imgUrl }, index}
 				<article class="other-works-box" class:featured-other-works={index === 0}>
