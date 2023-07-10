@@ -63,7 +63,7 @@
 	}
 
 	.contact-textbox {
-		background-color: #edf1f6;
+		background-color: var(--bg-color-accent);
 	}
 
 	.about {

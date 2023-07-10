@@ -36,6 +36,7 @@
 	/* colors */
 	--bg-color-primary: #fbfbfb;
 	--bg-color-secondary: #ffffff;
+	--bg-color-accent: #edf1f6;
 	--important: #000;
 	--sub: #111;
 	--body: #585b63;
@@ -136,6 +137,17 @@ h1 {
 h2 {
 	font-size: 3rem;
 	text-align: center;
+}
+
+h2::before {
+	content: '';
+	display: inline-block;
+	width: 1.5rem;
+	height: 2.5rem;
+	margin-right: 1rem;
+	font-size: 3rem;
+	line-height: 1;
+	background-color: var(--bg-color-accent);
 }
 
 h3 {

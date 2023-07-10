@@ -9,7 +9,7 @@
 		'expressjs',
 		'django',
 		'mongodb',
-		'git'
+		'k8s'
 	];
 </script>
 

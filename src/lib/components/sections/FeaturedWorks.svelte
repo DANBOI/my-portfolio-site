@@ -73,13 +73,13 @@
 	}
 
 	.work-img {
-		max-inline-size: 785px;
+		max-inline-size: 800px;
 		transition: 0.6s all;
 		box-shadow: var(--shadow);
 	}
 
 	.work-textbox {
-		max-inline-size: 445px;
+		max-inline-size: 600px;
 	}
 
 	@media (max-width: 885px) {
@@ -139,5 +139,10 @@
 			transform: none;
 			opacity: 1;
 		}
+	}
+
+	.transform {
+		transform: translateY(6rem);
+		opacity: 0;
 	}
 </style>
