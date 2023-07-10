@@ -1,32 +1,37 @@
 <script lang="ts">
+	import IntersectionObserver from 'svelte-intersection-observer';
 	import WorkLinks from '$lib/components/WorkLinks.svelte';
 	export let featuredProjects: any;
+
+	let element: HTMLElement;
 </script>
 
 <section id="featuredWorks">
 	<div class="container">
 		<h2>プロジェクトピックアップ</h2>
-		<div class="work-boxes">
-			{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl } (title)}
-				<div class="work-box">
-					<div class="work-textbox">
-						<h3>{title}</h3>
-						<p class="work-text">
-							{description}
-						</p>
-						<ol class="work-technologies">
-							{#each stack as tech}
-								<li>{tech}</li>
-							{/each}
-						</ol>
-						<WorkLinks {demoUrl} {srcUrl} />
+		<IntersectionObserver threshold={0.3} {element} let:intersecting>
+			<div class="work-boxes" bind:this={element}>
+				{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl } (title)}
+					<div class="work-box">
+						<div class="work-textbox">
+							<h3 class:intersecting>{title}</h3>
+							<p class="work-text" class:intersecting>
+								{description}
+							</p>
+							<ol class="work-technologies" class:intersecting>
+								{#each stack as tech}
+									<li>{tech}</li>
+								{/each}
+							</ol>
+							<WorkLinks {demoUrl} {srcUrl} />
+						</div>
+						<picture class="work-img" class:transform={!intersecting} class:intersecting>
+							<img loading="lazy" src="/src/lib/images/prjs/{imgUrl}" alt={title} />
+						</picture>
 					</div>
-					<picture class="work-img">
-						<img loading="lazy" src="/src/lib/images/prjs/{imgUrl}" alt={title} />
-					</picture>
-				</div>
-			{/each}
-		</div>
+				{/each}
+			</div>
+		</IntersectionObserver>
 	</div>
 </section>
 
@@ -116,8 +121,11 @@
 	.work-technologies {
 		--delay: 0.5s;
 		animation: slide-up 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-		/* contoll this when scrolling to the section area by js later*/
-		animation-play-state: running;
+		animation-play-state: paused;
+	}
+
+	.intersecting {
+		animation-play-state: running !important;
 	}
 
 	.work-img,

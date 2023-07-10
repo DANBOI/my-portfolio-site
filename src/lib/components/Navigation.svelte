@@ -24,6 +24,9 @@
 		}
 	];
 
+	let FocusedElement: HTMLElement;
+	let btnToggleNav: HTMLElement;
+
 	const toggleNav = () => {
 		hidden = !hidden;
 		// Prevent screen from scrolling
@@ -33,20 +36,31 @@
 		if (hidden) btnLabel = 'メニュー';
 		else setTimeout(() => (btnLabel = '閉じる'), 475);
 	};
+
+	const handleTab = (e: KeyboardEvent) => {
+		if (e.key === 'Tab' && document.activeElement === FocusedElement) {
+			e.preventDefault();
+			btnToggleNav.focus();
+		}
+	};
 </script>
 
-<svelte:body on:keydown={(e) => e.key === 'Escape' && toggleNav()} />
+<svelte:body on:keydown={(e) => e.key === 'Escape' && toggleNav()} on:keydown={handleTab} />
 
 <div class="menu-btn-container">
 	<div class="container">
-		<button on:click={toggleNav} type="button" class="menu-btn">{btnLabel}</button>
+		<button on:click={toggleNav} type="button" class="menu-btn" bind:this={btnToggleNav}
+			>{btnLabel}</button
+		>
 	</div>
 </div>
 
 <nav class="nav" class:hidden>
 	<ol class="nav-items">
 		{#each navItems as navItem (navItem.label)}
-			<li class="nav-item"><a href={navItem.href} on:click={toggleNav}>{navItem.label}</a></li>
+			<li class="nav-item">
+				<a href={navItem.href} bind:this={FocusedElement} on:click={toggleNav}>{navItem.label}</a>
+			</li>
 		{/each}
 	</ol>
 </nav>

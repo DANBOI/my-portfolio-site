@@ -122,6 +122,7 @@
 	}
 
 	.other-works-illustration img {
+		border: 1px solid var(--bg-color-accent);
 		border-radius: var(--gutter-na);
 	}
 
