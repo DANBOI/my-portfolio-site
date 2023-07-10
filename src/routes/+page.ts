@@ -5,94 +5,94 @@ export const prerender = true;
 export const load = (() => ({
 	projects: [
 		{
-			title: 'Test1',
+			title: 'events-kanban',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test1.com',
-			srcUrl: 'https://test1.com',
-			imgUrl: 'work-mountains.webp',
+			stack: ['Nuxt3', 'Tailwindcss', 'Typescript', 'Django', 'PostgreSQL'],
+			demoUrl: 'https://events-kanban-frontend.vercel.app/',
+			srcUrl: 'https://github.com/DANBOI/my-events-kanban',
+			imgUrl: 'events-kanban.png',
 			featured: true
 		},
 		{
-			title: 'Test2',
+			title: 'booking-site',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test2.com',
-			srcUrl: 'https://test2.com',
-			imgUrl: 'work-mountains.webp',
-			featured: false
-		},
-		{
-			title: 'Test3',
-			description: 'This is a test',
-			stack: ['Nuxtjs', 'Tailwindcss', 'Typescript', 'Vue'],
-			demoUrl: 'https://test3.com',
-			srcUrl: 'https://test3.com',
-			imgUrl: 'work-mountains.webp',
+			stack: ['Next13', 'Tailwindcss', 'Typescript', 'Prisma', 'MongoDB'],
+			demoUrl: 'https://my-booking-site.vercel.app/',
+			srcUrl: 'https://github.com/DANBOI/my-booking-site',
+			imgUrl: 'booking-site.png',
 			featured: true
 		},
 		{
-			title: 'Test4',
+			title: 'data-dashboard',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test4.com',
-			srcUrl: 'https://test4.com',
-			imgUrl: 'work-mountains.webp',
-			featured: false
-		},
-		{
-			title: 'Test5',
-			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test5.com',
-			srcUrl: 'https://test5.com',
-			imgUrl: 'work-mountains.webp',
-			featured: false
-		},
-		{
-			title: 'Test6',
-			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test6.com',
-			srcUrl: 'https://test6.com',
-			imgUrl: 'work-mountains.webp',
-			featured: false
-		},
-		{
-			title: 'Test7',
-			description: 'This is a test',
-			stack: ['sveltekit', 'Tailwindcss', 'Typescript', 'svelte'],
-			demoUrl: 'https://test7.com',
-			srcUrl: 'https://test7.com',
-			imgUrl: 'work-mountains.webp',
+			stack: ['React', 'Material UI', 'Typescript', 'Express.js', 'Mongoose'],
+			demoUrl: 'https://data-dashboard-frontend.onrender.com',
+			srcUrl: 'https://github.com/DANBOI/my-data-dashboard',
+			imgUrl: 'data-dashboard.png',
 			featured: true
+		},
+		{
+			title: 'next-post-app',
+			description: 'This is a test',
+			stack: ['Next13', 'Tailwindcss', 'Javascript', 'Next-Auth', 'Mongoose'],
+			demoUrl: 'https://next13-handson.vercel.app/',
+			srcUrl: 'https://github.com/DANBOI/next13-handson',
+			imgUrl: 'next13-handson.png',
+			featured: false
+		},
+		{
+			title: 'MERN-Auth-demo',
+			description: 'This is a test',
+			stack: ['React', 'Bootstrap5', 'ReduxToolkit', 'Express.js', 'Mongoose'],
+			demoUrl: 'https://mern-practice-ntiy.onrender.com/',
+			srcUrl: 'https://github.com/DANBOI/mern-practice',
+			imgUrl: 'mern-practice.png',
+			featured: false
+		},
+		{
+			title: 'mui5-react-front',
+			description: 'This is a test',
+			stack: ['React', 'Material UI', 'Javascript'],
+			demoUrl: 'https://mui5-react-app.vercel.app/',
+			srcUrl: 'https://github.com/DANBOI/mui5-react-app',
+			imgUrl: 'mui5-react-app.png',
+			featured: false
+		},
+		{
+			title: 'static landing page',
+			description: 'This is a test',
+			stack: ['Tailwindcss', 'HTML5'],
+			demoUrl: 'https://danboi.github.io/tailwind-landing-page/',
+			srcUrl: 'https://github.com/DANBOI/tailwind-landing-page',
+			imgUrl: 'tailwind-landing-page.png',
+			featured: false
 		},
 		{
 			title: 'Test8',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test8.com',
-			srcUrl: 'https://test8.com',
-			imgUrl: 'work-mountains.webp',
+			stack: ['Bootstrap5', 'HTML5'],
+			demoUrl: 'https://danboi.github.io/bootstrap5-practice/',
+			srcUrl: 'https://github.com/DANBOI/bootstrap5-practice',
+			imgUrl: 'bootstrap5-practice.png',
 			featured: false
 		},
 		{
-			title: 'Test9',
+			title: 'node-RestApi',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test9.com',
-			srcUrl: 'https://test9.com',
-			imgUrl: 'work-mountains.webp',
+			stack: ['Express.js', 'Typescript', 'Mongoose'],
+			demoUrl: '',
+			srcUrl: 'https://github.com/DANBOI/node-RestApi',
+			imgUrl: 'placeholder.webp',
 			featured: false
 		},
 		{
-			title: 'Test10',
+			title: 'portfolio-site',
 			description: 'This is a test',
-			stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'React'],
-			demoUrl: 'https://test10.com',
-			srcUrl: 'https://test10.com',
-			imgUrl: 'work-mountains.webpm',
-			featured: false
+			stack: ['sveltekit', 'Typescript', 'CSS3'],
+			demoUrl: '',
+			srcUrl: 'https://github.com/DANBOI/my-portfolio-site',
+			imgUrl: 'portfolio-site.png',
+			featured: true
 		}
 	]
 })) satisfies PageLoad;
