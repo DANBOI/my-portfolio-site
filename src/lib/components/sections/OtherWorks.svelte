@@ -10,7 +10,7 @@
 			{#each otherProjects as { title, description, demoUrl, srcUrl, imgUrl }, index}
 				<article class="other-works-box" class:featured-other-works={index === 0}>
 					<picture class="other-works-illustration" class:visually-hidden={index !== 0}>
-						<img src="/src/lib/images/prjs/{imgUrl}" alt={title} loading="lazy" />
+						<img src="./prjs/{imgUrl}" alt={title} loading="lazy" />
 					</picture>
 					<div class="other-works-textbox">
 						<div>

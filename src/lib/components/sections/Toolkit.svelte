@@ -18,13 +18,7 @@
 		<h2>テクニカルスキル</h2>
 		<div class="skills-imgs">
 			{#each techIcons.slice(0, 10) as tech}
-				<img
-					src="/src/lib/images/techs/{tech}.svg"
-					alt={tech}
-					class="skills-img"
-					loading="lazy"
-					title={tech}
-				/>
+				<img src="./techs/{tech}.svg" alt={tech} class="skills-img" loading="lazy" title={tech} />
 			{/each}
 		</div>
 	</div>

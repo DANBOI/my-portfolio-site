@@ -26,7 +26,7 @@
 							<WorkLinks {demoUrl} {srcUrl} />
 						</div>
 						<picture class="work-img" class:transform={!intersecting} class:intersecting>
-							<img loading="lazy" src="/src/lib/images/prjs/{imgUrl}" alt={title} />
+							<img loading="lazy" src="./prjs/{imgUrl}" alt={title} />
 						</picture>
 					</div>
 				{/each}
