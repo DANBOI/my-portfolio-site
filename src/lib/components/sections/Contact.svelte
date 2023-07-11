@@ -1,6 +1,47 @@
-<script>
+<script lang="ts">
 	import avatar from '$lib/images/chen-avatar.png';
 	import Button from '../Button.svelte';
+	import { PUBLIC_FORM_SUBMIT_URL, PUBLIC_FORM_SUBMIT_API_KEY } from '$env/static/public';
+
+	let formData = {
+		name: '',
+		email: '',
+		message: ''
+	};
+
+	let label = 'メール送信';
+
+	const handleSubmit = async () => {
+		label = '送信中...';
+		const requestData = JSON.stringify({
+			...formData,
+			access_key: PUBLIC_FORM_SUBMIT_API_KEY
+		});
+
+		try {
+			const response = await fetch(PUBLIC_FORM_SUBMIT_URL, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
+				body: requestData
+			});
+
+			const result = await response.json();
+			if (result.success) {
+				label = '✔ 送信完了';
+				// reset form states;
+				setTimeout(() => {
+					Object.keys(formData).forEach((key) => (formData[key as keyof typeof formData] = ''));
+					label = 'メール送信';
+				}, 2000);
+			}
+		} catch (error: any) {
+			label = '❌ 送信失敗';
+			alert('お手数ですが、画面をリフレッシュしてから再度お試しください。');
+		}
+	};
 </script>
 
 <section id="contact">
@@ -18,21 +59,28 @@
 				</p>
 				<img src={avatar} alt="Chen" class="avatar" loading="lazy" />
 			</div>
-			<form action="#" class="contact-form">
+			<form on:submit|preventDefault={handleSubmit} class="contact-form">
 				<div class="form-field">
-					<label for="name">お名前</label>
-					<input type="text" name="name" id="name" required />
+					<label for="name">・お名前</label>
+					<input type="text" name="name" id="name" bind:value={formData.name} required />
 				</div>
 				<div class="form-field">
-					<label for="email">メールアドレス</label>
-					<input type="email" name="email" id="email" required inputmode="email" />
+					<label for="email">・メールアドレス</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						bind:value={formData.email}
+						required
+						inputmode="email"
+					/>
 				</div>
 				<div class="form-field">
-					<label for="message"> 何でもいいので、お気軽にご連絡ください。</label>
-					<textarea name="message" id="message" rows="5" required />
+					<label for="message">・何でもいいので、お気軽にご連絡ください。</label>
+					<textarea name="message" id="message" rows="5" bind:value={formData.message} required />
 				</div>
 				<div style:text-align="center">
-					<Button label="メール送信" variant="primary" />
+					<Button type="submit" {label} variant="primary" />
 				</div>
 			</form>
 		</div>

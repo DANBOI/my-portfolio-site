@@ -1,6 +1,7 @@
 <script lang="ts">
-	export let href: string | undefined = undefined;
+	export let href = '';
 	export let label: string;
+	export let type: 'button' | 'submit' | 'reset' = 'button';
 	export let variant: 'primary' | 'secondary' = 'primary';
 	let btnModifier = variant === 'primary' ? 'btn-cta' : 'btn-secondary';
 </script>
@@ -8,7 +9,7 @@
 {#if href}
 	<a {href} class="btn {btnModifier}">{label}</a>
 {:else}
-	<button type="submit" class="btn {btnModifier}">{label}</button>
+	<button {type} class="btn {btnModifier}">{label}</button>
 {/if}
 
 <style>

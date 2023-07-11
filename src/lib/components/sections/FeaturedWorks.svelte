@@ -87,6 +87,15 @@
 		max-inline-size: 600px;
 	}
 
+	.work-textbox h3::after {
+		content: '';
+		display: block;
+		margin-top: 1rem;
+		block-size: 2px;
+		width: 100%;
+		background-color: var(--bg-color-accent);
+	}
+
 	@media (max-width: 885px) {
 		h2 {
 			margin-block-start: 45px;
