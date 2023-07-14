@@ -8,10 +8,10 @@
 
 <section id="featuredWorks">
 	<div class="container">
-		<h2>プロジェクトピックアップ</h2>
-		<IntersectionObserver threshold={0.3} {element} let:intersecting>
+		<h2>ピックアップ</h2>
+		<IntersectionObserver threshold={0.2} {element} let:intersecting>
 			<div class="work-boxes" bind:this={element}>
-				{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl } (title)}
+				{#each featuredProjects as { title, description, stack, demoUrl, srcUrl, imgUrl, hasRemarks } (title)}
 					<div class="work-box">
 						<div class="work-textbox">
 							<h3 class:intersecting>{title}</h3>
@@ -23,7 +23,7 @@
 									<li>{tech}</li>
 								{/each}
 							</ol>
-							<WorkLinks {demoUrl} {srcUrl} />
+							<WorkLinks {demoUrl} {srcUrl} {hasRemarks} />
 						</div>
 						<picture class="work-img" class:transform={!intersecting} class:intersecting>
 							<img loading="lazy" src="./prjs/{imgUrl}" alt={title} />

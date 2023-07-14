@@ -2,15 +2,27 @@
 	import github from '$lib/images/github.svg';
 	export let demoUrl: string;
 	export let srcUrl: string;
+	export let hasRemarks: boolean;
+	export let small = false;
+
+	$: remarksTxt = hasRemarks
+		? 'デプロイメントの方式により、サーバー側は稼働するまで30秒程かかるので、少々お待ちください。'
+		: '';
 </script>
 
 <div class="work-links">
-	<a href={demoUrl} target="_blank" rel="noopener" class="link">View project</a>
+	<a href={demoUrl} target="_blank" rel="noopener" class="link" title={remarksTxt}
+		>{remarksTxt && '※'} View project</a
+	>
 
 	<a href={srcUrl} target="_blank" rel="noopener" title="Source code">
 		<img src={github} alt="GitHub" loading="lazy" />
 	</a>
 </div>
+
+{#if hasRemarks}
+	<p class="work-remarks" class:small>※{remarksTxt}</p>
+{/if}
 
 <style>
 	.work-links {
@@ -35,9 +47,19 @@
 		transform: scale(1.1);
 	}
 
-	/* animation */
+	.work-remarks {
+		margin-block-start: var(--gutter-mi);
+		color: var(--color-500);
+		font-size: 1rem;
+	}
 
-	.work-links {
+	.small {
+		font-size: 0.8rem;
+	}
+
+	/* animation */
+	.work-links,
+	.work-remarks {
 		--delay: 0.5s;
 		animation: slide-up 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 		/* contoll this when scrolling to the section area by js later*/

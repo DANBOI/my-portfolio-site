@@ -32,6 +32,7 @@ export const load = (() => ({
 			demoUrl: 'https://data-dashboard-frontend.onrender.com',
 			srcUrl: 'https://github.com/DANBOI/my-data-dashboard',
 			imgUrl: 'data-dashboard.png',
+			hasRemarks: true,
 			featured: true
 		},
 		{
@@ -52,6 +53,7 @@ export const load = (() => ({
 			demoUrl: 'https://mern-practice-ntiy.onrender.com/',
 			srcUrl: 'https://github.com/DANBOI/mern-practice',
 			imgUrl: 'mern-practice.png',
+			hasRemarks: true,
 			featured: false
 		},
 		{

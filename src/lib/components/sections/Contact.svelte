@@ -61,11 +61,11 @@
 			</div>
 			<form on:submit|preventDefault={handleSubmit} class="contact-form">
 				<div class="form-field">
-					<label for="name">・お名前</label>
+					<label for="name"><span>・</span>お名前</label>
 					<input type="text" name="name" id="name" bind:value={formData.name} required />
 				</div>
 				<div class="form-field">
-					<label for="email">・メールアドレス</label>
+					<label for="email"><span>・</span>メールアドレス</label>
 					<input
 						type="email"
 						name="email"
@@ -76,7 +76,7 @@
 					/>
 				</div>
 				<div class="form-field">
-					<label for="message">・何でもいいので、お気軽にご連絡ください。</label>
+					<label for="message"><span>・</span>何でもいいので、お気軽にご連絡ください。</label>
 					<textarea name="message" id="message" rows="5" bind:value={formData.message} required />
 				</div>
 				<div style:text-align="center">
@@ -202,5 +202,10 @@
 		font-size: var(--text-sm);
 		margin-block-end: var(--gutter-na);
 		margin-inline-start: var(--gutter-na);
+	}
+
+	.form-field span {
+		font-size: var(--text-lg);
+		color: var(--color-500);
 	}
 </style>

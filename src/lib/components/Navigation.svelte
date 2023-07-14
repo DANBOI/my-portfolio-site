@@ -11,7 +11,7 @@
 			href: '#toolkit'
 		},
 		{
-			label: 'プロジェクトピックアップ',
+			label: 'ピックアップ',
 			href: '#featuredWorks'
 		},
 		{
@@ -59,7 +59,9 @@
 	<ol class="nav-items">
 		{#each navItems as navItem (navItem.label)}
 			<li class="nav-item">
-				<a href={navItem.href} bind:this={FocusedElement} on:click={toggleNav}>{navItem.label}</a>
+				<a href={navItem.href} bind:this={FocusedElement} on:click={toggleNav}
+					><h2>{navItem.label}</h2></a
+				>
 			</li>
 		{/each}
 	</ol>
@@ -78,10 +80,12 @@
 		display: block;
 		margin-inline-start: auto;
 		border: 1px solid var(--border-dark);
+		box-shadow: 0 0 0 1px var(--border);
 		width: 132px;
 		padding-block: var(--gutter-na);
 		border-radius: var(--gutter-lg);
 		text-decoration: none;
+		user-select: none;
 		background-color: var(--bg-color-secondary);
 		color: var(--important);
 		cursor: pointer;
@@ -89,6 +93,7 @@
 
 	.menu-btn,
 	.nav-items a {
+		opacity: 0.8;
 		font-stretch: 125%;
 		font-weight: 700;
 	}
@@ -117,7 +122,7 @@
 
 	.nav-item a {
 		display: inline-block;
-		font-size: 3.5rem;
+		/* font-size: 3.5rem; */
 		text-align: center;
 		text-decoration: none;
 		color: #fff;
