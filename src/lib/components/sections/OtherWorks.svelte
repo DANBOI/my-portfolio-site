@@ -7,7 +7,7 @@
 	<div class="container">
 		<h2>その他のプロジェクト</h2>
 		<div class="other-works-boxes">
-			{#each otherProjects as { title, description, demoUrl, srcUrl, imgUrl }, index}
+			{#each otherProjects as { title, description, demoUrl, srcUrl, imgUrl, hasRemarks }, index}
 				<article class="other-works-box" class:featured-other-works={index === 0}>
 					<picture class="other-works-illustration" class:visually-hidden={index !== 0}>
 						<img src="./prjs/{imgUrl}" alt={title} loading="lazy" />
@@ -19,7 +19,7 @@
 								{description}
 							</p>
 						</div>
-						<WorkLinks {demoUrl} {srcUrl} />
+						<WorkLinks {demoUrl} {srcUrl} {hasRemarks} small />
 					</div>
 				</article>
 			{/each}
